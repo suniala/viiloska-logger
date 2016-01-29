@@ -11,3 +11,7 @@ echo
 echo "Device 18123 should pass, location should be Varaaja"
 curl -d "key=asdf&type=1&id=18123&value=12" http://localhost:8080
 echo
+
+echo "Device 18123 should not pass due to invalid key"
+curl -d "key=qwer&type=1&id=18123&value=12" http://localhost:8080
+echo
