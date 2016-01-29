@@ -1,3 +1,13 @@
 #!/bin/bash
 
-curl -d "key=asdf&type=1&id=18448&value=1234.56" http://localhost:8080
+echo "Device 18448 should pass, location should be Halkovarasto"
+curl -d "key=asdf&type=1&id=18448&value=34.56" http://localhost:8080
+echo
+
+echo "Device 54321 should not pass"
+curl -d "key=asdf&type=1&id=54321&value=1234.56" http://localhost:8080
+echo
+
+echo "Device 18123 should pass, location should be Varaaja"
+curl -d "key=asdf&type=1&id=18123&value=12" http://localhost:8080
+echo
