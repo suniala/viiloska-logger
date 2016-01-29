@@ -8,6 +8,8 @@ Hacking with ELK stack. Aiming to gather and visualize temperature/humidity logg
  * logstash
 
  * bin/plugin install logstash-filter-translate
+ 
+ * elasticsearch
 
 
 # TODO
