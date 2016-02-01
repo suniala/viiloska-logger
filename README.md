@@ -7,9 +7,21 @@ Hacking with ELK stack. Aiming to gather and visualize temperature/humidity logg
 
  * logstash
 
- * bin/plugin install logstash-filter-translate
+     * bin/plugin install logstash-filter-translate
  
  * elasticsearch
+ 
+ * for elasticsearch watcher:
+ 
+     * bin/plugin install license
+ 
+     * bin/plugin install watcher
+     
+     * in config/elasticsearch.yml:
+     
+         * script.inline: on
+     
+         * script.indexed: on
 
 
 # Kibana visualizations
