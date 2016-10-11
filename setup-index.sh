@@ -1,7 +1,5 @@
 #!/bin/bash
 
-curl -XDELETE 'localhost:9200/data_logger?pretty'
-
 curl -XPUT http://localhost:9200/data_logger -d '{
     "mappings" : {
         "measurement" : {
