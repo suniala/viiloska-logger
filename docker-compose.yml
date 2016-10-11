@@ -18,4 +18,5 @@ services:
      - elasticsearch
     volumes:
       - ./config:/config
+      - ./env:/var/viiloska/env
     command: logstash -f /config/pipeline.conf
