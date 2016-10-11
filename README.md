@@ -26,7 +26,10 @@ docker-compose up -d
 
  * Configurable key
 
- * Configurable location for devices.yaml
+ * Move devices.yaml under env
+
+ * Move bulk import into another service so that same file is not reimported when
+   logstash is restarted
 
  * Email notifications for dead meters
 
