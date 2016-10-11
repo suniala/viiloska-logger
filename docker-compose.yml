@@ -1,6 +1,6 @@
 version: '2'
 services:
-  elastic:
+  elasticsearch:
     image: elasticsearch:2.4
     ports:
      - "9200:9200"
@@ -9,13 +9,13 @@ services:
     ports:
      - "5601:5601"
     depends_on:
-     - elastic
+     - elasticsearch
   logstash:
     build: ./logstash
     ports:
      - "8080:8080"
     depends_on:
-     - elastic
+     - elasticsearch
     volumes:
       - ./config:/config
     command: logstash -f /config/pipeline.conf
