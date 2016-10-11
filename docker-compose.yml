@@ -17,6 +17,6 @@ services:
     depends_on:
      - elasticsearch
     volumes:
-      - ./config:/config
+      - ./config:/var/viiloska/config
       - ./env:/var/viiloska/env
-    command: logstash -f /config/pipeline.conf
+    command: logstash -f /var/viiloska/config/pipeline.conf
