@@ -11,7 +11,7 @@ services:
     depends_on:
      - elastic
   logstash:
-    image: logstash:2.4
+    build: ./logstash
     ports:
      - "8080:8080"
     depends_on:
