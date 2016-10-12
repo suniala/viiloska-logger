@@ -3,6 +3,9 @@
 echo "Device 18448/1 should pass, location should be as 6 eteiskomero"
 curl -d "key=asdf&type_id=1&id=18448&value=34.56" http://localhost:8080
 echo
+
+echo "Device 18448/3 should pass, location should be as 6 eteiskomero"
+curl -d "key=asdf&type_id=3&id=18448&value=50.21" http://localhost:8080
 echo
 
 echo "Device 54321 should not pass"
